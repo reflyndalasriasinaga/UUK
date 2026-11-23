@@ -1,0 +1,142 @@
+:root {
+    color-scheme: light;
+    --color-primary: #7c3aed;
+    --color-primary-dark: #6d28d9;
+    --color-accent: #ec4899;
+    --color-text: #1f2937;
+    --color-muted: #6b7280;
+    --color-border: #e9d5ff;
+    --color-surface: #ffffff;
+    --shadow-card: 0 14px 40px rgba(91, 33, 182, 0.11);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 24px;
+    color: var(--color-text);
+    font-family: Arial, sans-serif;
+    background:
+        radial-gradient(circle at 8% 12%, rgba(236, 72, 153, 0.13), transparent 30%),
+        radial-gradient(circle at 92% 88%, rgba(124, 58, 237, 0.16), transparent 32%),
+        linear-gradient(135deg, #fdf2f8, #f5f3ff 55%, #ede9fe);
+}
+
+.container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: clamp(18px, 3vw, 30px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: var(--shadow-card);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--color-primary-dark);
+}
+
+h2 {
+    letter-spacing: -0.02em;
+}
+
+.page-header {
+    align-items: center;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="password"],
+select,
+textarea {
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    color: var(--color-text);
+    font: inherit;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.12);
+}
+
+button,
+.btn {
+    border-radius: 10px;
+    background: linear-gradient(110deg, var(--color-accent), var(--color-primary));
+    font-family: inherit;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+}
+
+button:hover,
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 7px 16px rgba(124, 58, 237, 0.2);
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid rgba(124, 58, 237, 0.45);
+    outline-offset: 3px;
+}
+
+.btn-batal,
+.btn-reset,
+.btn-secondary {
+    background: #6b7280;
+}
+
+.btn-edit {
+    background: #ec4899;
+}
+
+.btn-hapus,
+.btn-logout {
+    background: #e11d48;
+}
+
+.alert-sukses {
+    border: 1px solid #bbf7d0;
+    border-radius: 10px;
+}
+
+.alert-error,
+.alert-info {
+    border-radius: 10px;
+}
+
+table {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+th {
+    letter-spacing: 0.01em;
+}
+
+@media (max-width: 720px) {
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        padding: 18px;
+    }
+
+    .page-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
